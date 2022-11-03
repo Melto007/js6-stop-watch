@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color: #120E43;
+    --white-color: #fff;
+    --black-color: #000;
+    --main-color: #FF6666;
+    --red-color: #D82E2F;
+}
+
+body {
+    background-color: var(--background-color);
+    width: 100%;
+    height: 100vh;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.stopWatch-timer {
+    background-color: var(--white-color);
+    padding: 2rem 0;
+    border-radius: 0.8rem;
+    box-shadow: 0.8rem 0.8rem 1rem var(--black-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 2rem;
+    font-family: 'Lato',sans-serif;
+    font-weight: 900;
+    margin-bottom: 2rem;
+}
+
+.stopWatch-timer h1 {
+    padding: 0 1.2rem;
+    color: var(--white-color);
+    background-color: var(--main-color);
+    border-right: 0.2rem solid var(--black-color);
+    border-bottom: 0.2rem solid var(--black-color);
+    border-radius: 1rem;
+    box-shadow: -0.2rem -0.2rem 0.6rem var(--black-color);
+    position: relative;
+    margin: 0 2rem;
+}
+
+/* .stopWatch-timer h1:nth-child(1) {
+    border-right: 0.2rem solid var(--black-color);
+    border-bottom: 0.2rem solid var(--black-color);
+    border-radius: 1rem;
+    box-shadow: -0.2rem -0.2rem 1rem var(--black-color);
+} */
+
+
+.dot::after,
+.dot::after {
+    content: '';
+    position: absolute;
+    top: 20%;
+    right: -40%;
+    background-color: var(--black-color);
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 0.1rem;
+}
+
+.dot::before,
+.dot::before {
+    content: '';
+    position: absolute;
+    top: 70%;
+    right: -40%;
+    background-color: var(--black-color);
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 0.1rem;
+}
+
+.timer p {
+    font-family: 'Montserrat',sans-serif;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-top: 0.3rem;
+}
+
+@media screen and (max-width: 560px) {
+    .stopWatch-timer {
+        padding: 2rem 0;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .stopWatch-timer h1 {
+        padding: 0.2rem 1.2rem;
+        margin: 0 1rem;
+    }
+    
+    .dot::after,
+    .dot::after {
+        top: 20%;
+        right: -40%;
+        width: 0.3rem;
+        height: 0.3rem;
+        border-radius: 0.1rem;
+    }
+    
+    .dot::before,
+    .dot::before {
+        top: 70%;
+        right: -40%;
+        width: 0.3rem;
+        height: 0.3rem;
+        border-radius: 0.1rem;
+    }
+
+    .timer p {
+        font-size: 0.5rem;
+    }
+}
+
+
+@media screen and (max-width: 375px) {
+    .stopWatch-timer {
+        padding: 2rem 0.3rem;
+        font-size: 1rem;
+    }
+    
+    .stopWatch-timer h1 {
+        padding: 0.2rem 1.2rem;
+        margin: 0 0.6rem;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+    .stopWatch-timer {
+        padding: 1rem 0.5rem;
+        font-size: 1rem;
+    }
+    
+    .stopWatch-timer h1 {
+        padding: 0 0.7rem;
+        margin: 0 0.4rem;
+    }
+    
+    .dot::after,
+    .dot::after {
+        right: -20%;
+    }
+    
+    .dot::before,
+    .dot::before {
+        right: -20%;
+    }
+}
+
+.stopWatch-controller {
+    text-align: center;
+}
+
+.button {
+    color: var(--white-color);
+    padding: 1rem 2rem;
+    border-radius: 0.3rem;
+    background-color: var(--main-color);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: 0 1rem;
+    font-size: 1.5rem;
+    transition: all 0.5s;
+}
+
+.button:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0.6rem 0.6rem 0.9rem var(--black-color);
+}
+
+.button:active {
+    transform: translateY(0);
+}
+
+.stopWatch-controller .button:nth-child(2) {
+    background-color: var(--white-color);
+    color: var(--red-color);
+}
+
+.stopWatch-controller .button:nth-child(3) {
+    background-color: var(--red-color);
+    color: var(--black-color);
+}
+
+@media screen and (max-width: 320px) {
+    .button {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.8rem;
+        margin: 0 0.4rem;
+    }
+}

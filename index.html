@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StopWatch</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    <div class="container">
+        <div class="stopWatch-timer">
+            <div class="timer">
+                <h1 class="dot hour">00</h1>
+                <p>Hour</p>
+            </div>
+            <div class="timer">
+                <h1 class="dot minute">00</h1>
+                <p>Minute</p>
+            </div>
+            <div class="timer">
+                <h1 class="second">00</h1>
+                <p>Second</p>
+            </div>
+        </div>
+
+        <div class="stopWatch-controller">
+            <button class="button"><i class="fa-sharp fa-solid fa-play"></i></button>
+            <button class="button"><i class="fa-solid fa-rotate-right"></i></button>
+            <button class="button"><i class="fa-solid fa-stop"></i></button>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
